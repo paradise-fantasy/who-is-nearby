@@ -12,7 +12,8 @@ def check_home(person):
 		if not (person.isPresent()):
 			print(time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) + "  " + colored(person.name, person.getColor()) + " har ankommet!")
 			person.setPresence(True)
+            return person
 
 	elif ( person.isPresent() ) :
 		print( time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) +"  " + colored(person.name, person.getColor()) + " har dratt.")
-		person.setPrescence(False)
+		person.setPresence(False)
