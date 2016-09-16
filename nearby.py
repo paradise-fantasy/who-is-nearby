@@ -19,16 +19,29 @@ import api
 #
 # alle = [havard, frederik, raymi, tormod, kabbe, tuva, marit, anna]
 
-members = api.get_members()
+list_of_members = api.get_members()
 
 def main():
 	print("""Paradise: Who's home?""")
 	while True:
 
-		for person in members:
+		for person in list_of_members:
 			check_home(person)
 
 		time.sleep(2)
 
+def kick_everyone_out():
+	for person in list_of_members:
+		if person.isPresent():
+			person.setPresence(False)
+			api.post_presence(person)
+			print(person.name + " was kicked out.")
+
+
 if __name__ == "__main__":
-	main()
+	try:
+		main()
+	except KeyboardInterrupt:
+		print("Kicking everyone out.")
+		kick_everyone_out()
+		print("Shutting down.")
