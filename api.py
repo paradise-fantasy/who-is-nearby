@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import requests
-import urllib
 import urllib2
 import json
 from Person import Person
