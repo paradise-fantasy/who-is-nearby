@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+
 import requests
 import urllib
 import urllib2
@@ -11,7 +12,6 @@ url_post_presence = "http://paradise-backend.herokuapp.com/api/bluetooth-events"
 
 def get_members():
     members = []
-    #r = requests.get(url_get_members)
     getMembers = (urllib2.urlopen(url_get_members).read())
 
     for person in json.loads(getMembers):
