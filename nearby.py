@@ -5,6 +5,7 @@ import bluetooth
 import time
 from termcolor import colored
 from Person import Person
+from handleBluetooth import check_home
 
 
 havard		=	Person("Håvard",		"40:B8:37:2C:C6:9F", 	"blue")
