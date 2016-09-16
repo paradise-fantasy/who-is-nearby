@@ -7,7 +7,7 @@ from termcolor import colored
 
 
 def check_home(person):
-	result = bluetooth.lookup_name(person.mac, timeout=5)
+	result = bluetooth.lookup_name(person.bluetooth_address, timeout=5)
 	if (result != None):
 		if not (person.isPresent()):
 			print(time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) + "  " + colored(person.name, person.getColor()) + " har ankommet!")

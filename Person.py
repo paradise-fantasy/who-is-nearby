@@ -1,9 +1,14 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 class Person:
-	def __init__(self, name, mac, color):
+	def __init__(self, ID, name, bluetooth_address, color, room):
+		self.ID = ID
 		self.bluetoothPresence = False
 		self.name = name
-		self.mac = mac
+		self.bluetooth_address = bluetooth_address
 		self.color = color
+		self.room = room
 
 	def isPresent(self):
 		return self.bluetoothPresence
