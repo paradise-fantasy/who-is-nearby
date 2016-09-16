@@ -3,7 +3,7 @@
 
 import bluetooth
 import time
-from termcolor import colored
+
 from Person import Person
 from handleBluetooth import check_home
 

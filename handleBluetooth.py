@@ -3,6 +3,7 @@
 
 import bluetooth
 import time
+from termcolor import colored
 
 
 def check_home(person):
