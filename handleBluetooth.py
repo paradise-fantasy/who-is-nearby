@@ -14,7 +14,6 @@ def check_home(person):
 			print(time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) + "  " + colored(person.name, person.getColor()) + " har ankommet!")
 			person.setPresence(True)
 			api.post_presence(person)
-		#return person
 
 	elif ( person.isPresent() ) :
 		print( time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) +"  " + colored(person.name, person.getColor()) + " har dratt.")
