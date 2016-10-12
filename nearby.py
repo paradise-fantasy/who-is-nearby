@@ -6,7 +6,9 @@ import time
 from Person import Person
 from handleBluetooth import check_home
 import api
+import logging
 
+logging.basicConfig(filename='logs/output.log', level=logging.DEBUG)
 
 # havard		=	Person("Håvard",		"40:B8:37:2C:C6:9F", 	"blue")
 # frederik	=	Person("Frederik",		"F0:24:75:73:CE:7F",	"green")
@@ -22,7 +24,7 @@ import api
 list_of_members = api.get_members()
 
 def main():
-	print("""Paradise: Who's home?""")
+	logging.debug("[*] Paradise: Who's home?")
 	while True:
 
 		for person in list_of_members:
@@ -35,13 +37,13 @@ def kick_everyone_out():
 		if person.isPresent():
 			person.setPresence(False)
 			api.post_presence(person)
-			print(person.name + " was kicked out.")
+			logging.debug("[*] " + person.name + " was kicked out.")
 
 
 if __name__ == "__main__":
 	try:
 		main()
 	except KeyboardInterrupt:
-		print("Kicking everyone out.")
+		logging.debug("[*] Kicking everyone out.")
 		kick_everyone_out()
-		print("Shutting down.")
+		logging.debug("[*] Shutting down.")
