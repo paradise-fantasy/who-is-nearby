@@ -15,7 +15,7 @@ list_of_members = api.get_members()
 
 def main():
 	kick_everyone_out()
-	logging.debug("[*] Paradise: Who's home?")
+	logging.info("[*] Paradise: Who's home?")
 	while True:
 
 		for person in list_of_members:
@@ -24,18 +24,18 @@ def main():
 		time.sleep(2)
 
 def kick_everyone_out():
+	logging.info("[*] Kicking everyone out.")
 	for person in list_of_members:
-		if person.isPresent():
-			person.setPresence(False)
-			api.post_presence(person)
-			logging.debug("[*] " + person.name + " was kicked out.")
-			print(colored(person.name, person.color) + " was kicked out.")
+		#if person.isPresent():
+		person.setPresence(False)
+		api.post_presence(person)
+		logging.info("[*] " + person.name + " was kicked out.")
+		print(colored(person.name, person.color) + " was kicked out.")
 
 
 if __name__ == "__main__":
 	try:
 		main()
 	except KeyboardInterrupt:
-		logging.debug("[*] Kicking everyone out.")
 		kick_everyone_out()
-		logging.debug("[*] Shutting down.")
+		logging.info("[*] Shutting down.")
