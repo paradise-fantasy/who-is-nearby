@@ -1,2 +1,4 @@
 # Python compile files
 *.pyc
+
+*.log

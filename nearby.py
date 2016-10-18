@@ -9,7 +9,7 @@ import api
 import logging
 from termcolor import colored
 
-logging.basicConfig(filename='logs/output.log', level=logging.DEBUG)
+logging.basicConfig(filename='home/pi/who-is-nearby/logs/output.log', level=logging.DEBUG)
 
 list_of_members = api.get_members()
 
