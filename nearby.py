@@ -14,6 +14,7 @@ logging.basicConfig(filename='logs/output.log', level=logging.DEBUG)
 list_of_members = api.get_members()
 
 def main():
+	kick_everyone_out()
 	logging.debug("[*] Paradise: Who's home?")
 	while True:
 
