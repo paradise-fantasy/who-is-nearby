@@ -1,0 +1,25 @@
+DEBUG:root:[*] Paradise: Who's home?
+INFO:urllib3.connectionpool:Starting new HTTP connection (1): paradise-backend.herokuapp.com
+DEBUG:urllib3.connectionpool:"POST /api/bluetooth-events HTTP/1.1" 200 2
+INFO:urllib3.connectionpool:Starting new HTTP connection (1): paradise-backend.herokuapp.com
+DEBUG:urllib3.connectionpool:"POST /api/bluetooth-events HTTP/1.1" 200 2
+DEBUG:root:[*] Kicking everyone out.
+DEBUG:root:[*] Shutting down.
+DEBUG:root:[*] Paradise: Who's home?
+INFO:urllib3.connectionpool:Starting new HTTP connection (1): paradise-backend.herokuapp.com
+DEBUG:urllib3.connectionpool:"POST /api/bluetooth-events HTTP/1.1" 200 2
+INFO:urllib3.connectionpool:Starting new HTTP connection (1): paradise-backend.herokuapp.com
+DEBUG:urllib3.connectionpool:"POST /api/bluetooth-events HTTP/1.1" 200 2
+INFO:urllib3.connectionpool:Starting new HTTP connection (1): paradise-backend.herokuapp.com
+DEBUG:urllib3.connectionpool:"POST /api/bluetooth-events HTTP/1.1" 200 2
+DEBUG:root:[*] Kicking everyone out.
+INFO:urllib3.connectionpool:Starting new HTTP connection (1): paradise-backend.herokuapp.com
+DEBUG:urllib3.connectionpool:"POST /api/bluetooth-events HTTP/1.1" 200 2
+DEBUG:root:[*] Marit was kicked out.
+INFO:urllib3.connectionpool:Starting new HTTP connection (1): paradise-backend.herokuapp.com
+DEBUG:urllib3.connectionpool:"POST /api/bluetooth-events HTTP/1.1" 200 2
+DEBUG:root:[*] Håvard was kicked out.
+INFO:urllib3.connectionpool:Starting new HTTP connection (1): paradise-backend.herokuapp.com
+DEBUG:urllib3.connectionpool:"POST /api/bluetooth-events HTTP/1.1" 200 2
+DEBUG:root:[*] Raymi was kicked out.
+DEBUG:root:[*] Shutting down.
