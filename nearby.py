@@ -26,7 +26,7 @@ def main():
 		for deltager in list_of_members:
 			if (deltager.isPresent() and deltager.room == "paradise"):
 				counter += 1
-		if (counter == 4 and currently_home_paradise != 4):
+		if (counter == 5 and currently_home_paradise != 5):
 			send_everyone_present()
 		currently_home_paradise = counter
 
