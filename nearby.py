@@ -33,7 +33,7 @@ def main():
 		time.sleep(2)
 
 def kick_everyone_out():
-	logging.info(time.strftime(timestamp() + "Kicking everyone out.")
+	logging.info(timestamp() + "Kicking everyone out.")
 	for person in list_of_members:
 		#if person.isPresent():
 		person.setPresence(False)

@@ -1,6 +1,6 @@
 import paho.mqtt.publish as publish
 
-data_topic = "paradise/presence/data"
+data_topic = "paradise/log/presence"
 notify_topic = "paradise/notify/presence"
 everyone_present_topic = "paradise/flamingo/notify"
 
