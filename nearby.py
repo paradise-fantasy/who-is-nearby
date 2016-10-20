@@ -17,7 +17,7 @@ currently_home_paradise = 0
 
 def main():
 	kick_everyone_out()
-	logging.info(time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) +" [*] Paradise: Who's home?")
+	logging.info(timestamp() + "Paradise: Who's home?")
 	while True:
 
 		for person in list_of_members:
@@ -33,14 +33,16 @@ def main():
 		time.sleep(2)
 
 def kick_everyone_out():
-	logging.info(time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) + " [*] Kicking everyone out.")
+	logging.info(time.strftime(timestamp() + "Kicking everyone out.")
 	for person in list_of_members:
 		#if person.isPresent():
 		person.setPresence(False)
 		api.post_presence(person)
-		logging.info(time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) + " [*] " + person.name + " was kicked out.")
+		logging.info(timestamp() + person.name + " was kicked out.")
 		print(colored(person.name, person.color) + " was kicked out.")
 
+def timestamp():
+	return "[" + time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) + "] "
 
 if __name__ == "__main__":
 	try:
