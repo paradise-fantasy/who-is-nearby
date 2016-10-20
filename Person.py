@@ -9,6 +9,7 @@ class Person:
 		self.bluetooth_address = bluetooth_address
 		self.color = color
 		self.room = room
+		self.last_present = 0
 
 	def isPresent(self):
 		return self.bluetoothPresence

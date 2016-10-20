@@ -15,13 +15,14 @@ def check_home(person):
 	result = bluetooth.lookup_name(person.bluetooth_address, timeout=5)
 	if (result != None):
 		if not (person.isPresent()):
-			print(timestamp() + colored(person.name, person.getColor()) + " has arrived in Paradise!")
+			print(timestamp() + colored(person.name, person.getColor()) + " has arrived in " + person.room)
 			person.setPresence(True)
 			api.post_presence(person)
 			send_presence_event(str(str(person.name) + " has arrived in " + str(person.room)))
 
 	elif ( person.isPresent() ) :
-		print( timestamp() + colored(person.name, person.getColor()) + " has left Paradise.")
+		print( timestamp() + colored(person.name, person.getColor()) + " has left " + person.room)
 		person.setPresence(False)
+		person.last_present = time.localtime()
 		api.post_presence(person)
 		send_presence_event(str(str(person.name) + " has left " + str(person.room)))

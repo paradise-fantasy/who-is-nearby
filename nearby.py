@@ -27,7 +27,7 @@ def main():
 			if (deltager.isPresent() and deltager.room == "paradise"):
 				counter += 1
 		if (counter == 4 and currently_home_paradise != 4):
-			send_everyone_present("true")
+			send_everyone_present()
 		currently_home_paradise = counter
 
 		time.sleep(2)
