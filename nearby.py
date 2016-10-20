@@ -17,7 +17,7 @@ currently_home_paradise = 0
 
 def main():
 	kick_everyone_out()
-	logging.info("[*] Paradise: Who's home?")
+	logging.info(time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) +" [*] Paradise: Who's home?")
 	while True:
 
 		for person in list_of_members:
@@ -26,19 +26,19 @@ def main():
 		for deltager in list_of_members:
 			if (deltager.isPresent() and deltager.room == "paradise"):
 				counter += 1
-		if (counter == 4 && currently_home_paradise != 4):
+		if (counter == 4 and currently_home_paradise != 4):
 			send_everyone_present("true")
 		currently_home_paradise = counter
 
 		time.sleep(2)
 
 def kick_everyone_out():
-	logging.info("[*] Kicking everyone out.")
+	logging.info(time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) + " [*] Kicking everyone out.")
 	for person in list_of_members:
 		#if person.isPresent():
 		person.setPresence(False)
 		api.post_presence(person)
-		logging.info("[*] " + person.name + " was kicked out.")
+		logging.info(time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) + " [*] " + person.name + " was kicked out.")
 		print(colored(person.name, person.color) + " was kicked out.")
 
 
