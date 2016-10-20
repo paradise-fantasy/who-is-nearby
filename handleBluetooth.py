@@ -5,6 +5,7 @@ import bluetooth
 import time
 from termcolor import colored
 import api
+from mqtt_api import send_presence_event
 
 def timestamp():
 	return "[" + time.strftime("%a, %d %b %Y %H:%M:%S", time.localtime()) + "] "
