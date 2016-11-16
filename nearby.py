@@ -14,7 +14,6 @@ import json
 logging.basicConfig(filename='/home/pi/who-is-nearby/logs/output.log', level=logging.DEBUG)
 
 list_of_members = api.get_members()
-print list_of_members
 currently_home_paradise = 0
 
 def main():
