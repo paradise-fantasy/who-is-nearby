@@ -1,8 +1,9 @@
 import paho.mqtt.publish as publish
 
 data_topic = "paradise/log/presence"
-notify_topic = "paradise/notify/presence"
+notify_topic = "paradise/notify/tts"
 everyone_present_topic = "paradise/flamingo/notify"
+api_topic = "paradise/api/presence"
 
 ca = "ca.crt"
 
@@ -11,6 +12,9 @@ def send_presence_event(presence_event):
 
 	publish.single(data_topic, data, port=1883, hostname="nyx.bjornhaug.net")
 	publish.single(notify_topic, data, port=1883, hostname="nyx.bjornhaug.net")
+
+def send_members_status(data):
+	publish.single(api_topic, data, port=1883, hostname="nyx.bjornhaug.net")
 
 def send_everyone_present():
 	data = "true"
